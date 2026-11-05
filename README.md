@@ -3,9 +3,12 @@
 ## Status atual
 
 - **Código no GitHub:** https://github.com/Kelvin-911/calculeja
-- **Site no ar (Vercel):** https://calculeja-qyw3st4bt-projeto-2567.vercel.app
+- **Site no ar (Vercel):** https://calculeja.vercel.app (domínio fixo do projeto)
 - Todo push na branch `main` gera um novo deploy automático na Vercel.
-- Próximo passo recomendado: pegar a URL de produção "estável" no painel da Vercel (Project → Domains) — a URL acima é a do primeiro deploy e pode mudar; a Vercel também gera um domínio fixo tipo `calculeja.vercel.app` que não muda a cada deploy.
+- **Google Search Console:** site verificado, sitemap enviado (4 páginas descobertas).
+- **Google AdSense:** conta criada, código de anúncios (`ca-pub-5938250398235100`) e `ads.txt` publicados, **revisão do site solicitada** em 05/11/2026 — aguardando aprovação do Google (pode levar de dias a semanas).
+- **Falta:** completar os dados de pagamento no painel do AdSense (Pagamentos → dados bancários) — não bloqueia a revisão, mas é necessário pra receber quando aprovar.
+- Página de `privacidade.html` publicada (exigida pelo AdSense, linkada no rodapé de todas as páginas).
 
 Site estático, 100% gratuito pra hospedar, com calculadoras que resolvem dúvidas reais de quem é CLT no Brasil. Objetivo: gerar renda via **AdSense** (anúncios) e **afiliados** (cursos de finanças/carreira) conforme o tráfego crescer. Sem investimento inicial — só tempo.
 
@@ -44,25 +47,27 @@ python -m http.server 8080
 
 Nenhuma dessas opções exige cartão de crédito no plano gratuito.
 
-## O que eu preciso que você faça (contas que exigem seus dados/CPF)
+## O que já foi feito vs. o que falta
 
-Eu não consigo criar essas contas por você — elas pedem verificação humana/identidade:
+**Feito (eu + você):**
+1. ✅ Site construído, testado e no ar (GitHub + Vercel).
+2. ✅ Google Search Console configurado e sitemap enviado.
+3. ✅ Conta AdSense criada, site conectado e revisão solicitada.
+4. ✅ Página de Política de Privacidade.
 
-1. **Conta no GitHub** (grátis) — pra guardar o código e conectar no deploy.
-2. **Conta na Vercel ou Netlify** (grátis) — pra publicar o site.
-3. **Google Search Console** — pra indexar o site no Google e acompanhar buscas.
-4. **Google AdSense** — só vale a pena pedir depois que o site tiver algum tráfego orgânico (geralmente exigem conteúdo publicado há um tempo e algumas visitas).
-5. **Conta de afiliado na Hotmart** (ou similar) — pra conseguir links de produtos de finanças/carreira pra recomendar nas páginas das calculadoras.
+**Falta (só você, dados pessoais/bancários):**
+1. **Pagamentos no AdSense** — painel AdSense → Pagamentos → inserir dados bancários (nome, endereço, conta) pra poder receber quando aprovado.
+2. **Conta de afiliado na Hotmart** (ou similar) — opcional, pra ter links de produtos de finanças/carreira pra recomendar nas páginas das calculadoras mais pra frente.
 
-Quando estiver com essas contas, me avisa e eu continuo (conectar domínio, configurar analytics, escrever o conteúdo de SEO, adicionar os anúncios/links no lugar certo).
+**Falta (eu posso fazer, é só avisar):**
+1. Mais calculadoras de nicho parecido (ex: férias, 13º isolado, horas extras, FGTS, aposentadoria) — cada uma é uma porta de entrada de busca nova e reforça o perfil do site pra revisão do AdSense.
+2. Conteúdo de apoio (artigos curtos) em cada página explicando o cálculo.
+3. Divulgação inicial: sugestões de posts em comunidades de RH/finanças pessoais, roteiro de vídeo curto mostrando a calculadora.
 
-## Roteiro de crescimento (próximos passos)
+## Esperando (fora do nosso controle)
 
-1. Deploy do site (gratuito) e submissão no Google Search Console.
-2. Mais 4–6 calculadoras de nicho parecido (ex: calculadora de férias, 13º isolado, horas extras, FGTS, aposentadoria) — cada uma é uma porta de entrada de busca nova.
-3. Conteúdo de apoio (artigos curtos) em cada página explicando o cálculo — já tem a base, só expandir.
-4. Depois de tráfego: Google AdSense + links de afiliados relevantes (cursos de finanças pessoais, contabilidade, concursos).
-5. Divulgação inicial: posts em comunidades de RH/finanças pessoais, TikTok/Reels curtos mostrando a calculadora resolvendo uma dúvida comum.
+- **Revisão do AdSense**: Google analisa o site contra as políticas do programa. Pode levar de poucos dias a algumas semanas. Enquanto isso, os anúncios não aparecem — é normal.
+- **Indexação no Google**: mesmo com o sitemap enviado, o Google leva um tempo (dias) pra rastrear e começar a mostrar as páginas nos resultados de busca.
 
 ## Avisos importantes
 
