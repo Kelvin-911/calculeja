@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de Horas Extras e Adicional Noturno — CalculeJá</title>
+  <meta name="description" content="Calcule o valor das horas extras de 50% e 100%, e o adicional noturno de 20%, a partir do seu salário bruto mensal." />
+  <link rel="canonical" href="https://calculeja.vercel.app/calculadoras/horas-extras.html" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5938250398235100" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="../index.html">Calcule<span>Já</span></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="salario-liquido.html">Salário líquido</a></li>
+          <li><a href="rescisao-trabalhista.html">Rescisão</a></li>
+          <li><a href="ferias.html">Férias</a></li>
+          <li><a href="decimo-terceiro.html">13º Salário</a></li>
+          <li><a href="horas-extras.html">Horas Extras</a></li>
+          <li><a href="juros-compostos.html">Juros compostos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container calc-page">
+    <div class="calc-header">
+      <h1>Calculadora de Horas Extras</h1>
+      <p>Calcule o valor das horas extras de 50% e 100%, e o adicional noturno de 20%, a partir do seu salário e carga horária mensal.</p>
+    </div>
+
+    <div class="calc-layout">
+      <form class="card" id="form-horas-extras" novalidate>
+        <div class="field">
+          <label for="salario-bruto-he">Salário bruto mensal (R$)</label>
+          <input type="text" inputmode="decimal" id="salario-bruto-he" placeholder="Ex: 2200,00" required />
+        </div>
+        <div class="field">
+          <label for="horas-mensais">Carga horária mensal</label>
+          <input type="number" min="1" step="1" id="horas-mensais" value="220" required />
+          <span class="hint">220h é o padrão para jornada de 44h semanais. Ajuste se sua carga for diferente.</span>
+        </div>
+        <div class="field">
+          <label for="horas-50">Horas extras a 50%</label>
+          <input type="number" min="0" step="0.5" id="horas-50" value="0" />
+        </div>
+        <div class="field">
+          <label for="horas-100">Horas extras a 100%</label>
+          <input type="number" min="0" step="0.5" id="horas-100" value="0" />
+          <span class="hint">Geralmente domingos e feriados trabalhados.</span>
+        </div>
+        <div class="field">
+          <label for="horas-noturnas">Horas em período noturno</label>
+          <input type="number" min="0" step="0.5" id="horas-noturnas" value="0" />
+          <span class="hint">Adicional noturno de 20% sobre a hora normal (22h às 5h).</span>
+        </div>
+        <div class="error-msg" id="erro-horas-extras" role="alert"></div>
+        <button type="submit" class="btn-primary">Calcular horas extras</button>
+      </form>
+
+      <div class="card result-panel" id="resultado-horas-extras" aria-live="polite">
+        <p class="result-empty">Preencha o formulário para ver o resultado.</p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Como são calculadas as horas extras</h2>
+      <p>O valor da hora normal é o salário bruto dividido pela carga horária mensal (geralmente 220h). As horas extras somam um adicional sobre esse valor: no mínimo <strong>50%</strong> em dias normais, e <strong>100%</strong> em domingos e feriados (ou conforme a convenção coletiva da categoria). O <strong>adicional noturno</strong> de 20% se aplica às horas trabalhadas entre 22h e 5h.</p>
+    </section>
+
+    <div class="disclaimer">
+      Esta calculadora traz uma estimativa simplificada do valor bruto das horas extras e não inclui o reflexo no DSR (Descanso Semanal Remunerado), 13º e férias, nem percentuais diferentes definidos por convenção coletiva. Consulte o RH da sua empresa ou um contador para o valor exato.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="../index.html">CalculeJá</a> — ferramentas gratuitas de cálculo financeiro e trabalhista. <a href="../privacidade.html">Política de Privacidade</a></p>
+    </div>
+  </footer>
+  <script type="module" src="../js/main.js"></script>
+  <script type="module">
+    import { initHorasExtrasForm } from "../js/calc-horas-extras.js";
+    initHorasExtrasForm();
+  </script>
+</body>
+</html>

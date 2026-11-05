@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de 13º Salário 2026 — CalculeJá</title>
+  <meta name="description" content="Calcule o 13º salário proporcional ou integral: 1ª e 2ª parcela, com desconto de INSS e IRRF 2026 na segunda parcela." />
+  <link rel="canonical" href="https://calculeja.vercel.app/calculadoras/decimo-terceiro.html" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5938250398235100" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="../index.html">Calcule<span>Já</span></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="salario-liquido.html">Salário líquido</a></li>
+          <li><a href="rescisao-trabalhista.html">Rescisão</a></li>
+          <li><a href="ferias.html">Férias</a></li>
+          <li><a href="decimo-terceiro.html">13º Salário</a></li>
+          <li><a href="horas-extras.html">Horas Extras</a></li>
+          <li><a href="juros-compostos.html">Juros compostos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container calc-page">
+    <div class="calc-header">
+      <h1>Calculadora de 13º Salário (2026)</h1>
+      <p>Calcule o valor do 13º salário proporcional, com a 1ª parcela (sem desconto) e a 2ª parcela (com INSS e IRRF).</p>
+    </div>
+
+    <div class="calc-layout">
+      <form class="card" id="form-decimo-terceiro" novalidate>
+        <div class="field">
+          <label for="salario-bruto-13">Salário bruto mensal (R$)</label>
+          <input type="text" inputmode="decimal" id="salario-bruto-13" placeholder="Ex: 3000,00" required />
+        </div>
+        <div class="field">
+          <label for="meses-trabalhados">Meses trabalhados no ano</label>
+          <input type="number" min="1" max="12" step="1" id="meses-trabalhados" value="12" required />
+          <span class="hint">Mês com 15 dias ou mais trabalhados conta como mês cheio. Use 12 se trabalhou o ano todo.</span>
+        </div>
+        <div class="field">
+          <label for="dependentes-13">Número de dependentes</label>
+          <input type="number" min="0" step="1" id="dependentes-13" value="0" />
+        </div>
+        <div class="error-msg" id="erro-decimo-terceiro" role="alert"></div>
+        <button type="submit" class="btn-primary">Calcular 13º salário</button>
+      </form>
+
+      <div class="card result-panel" id="resultado-decimo-terceiro" aria-live="polite">
+        <p class="result-empty">Preencha o formulário para ver o resultado.</p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Como funciona o 13º salário</h2>
+      <p>O 13º salário é pago em duas parcelas: a <strong>1ª parcela</strong> (até 30 de novembro) corresponde a metade do valor e não tem desconto. A <strong>2ª parcela</strong> (até 20 de dezembro) é a outra metade, já com os descontos de INSS e IRRF calculados sobre o valor <em>total</em> do 13º.</p>
+      <p>Quem trabalhou menos de 12 meses no ano recebe o valor proporcional: 1/12 do salário por mês trabalhado (mês com 15 dias ou mais conta como mês cheio).</p>
+    </section>
+
+    <div class="disclaimer">
+      Esta calculadora é uma estimativa educativa baseada nas tabelas de INSS e IRRF vigentes em 2026. Consulte o RH da sua empresa ou um contador para o valor exato.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="../index.html">CalculeJá</a> — ferramentas gratuitas de cálculo financeiro e trabalhista. <a href="../privacidade.html">Política de Privacidade</a></p>
+    </div>
+  </footer>
+  <script type="module" src="../js/main.js"></script>
+  <script type="module">
+    import { initDecimoTerceiroForm } from "../js/calc-13.js";
+    initDecimoTerceiroForm();
+  </script>
+</body>
+</html>
