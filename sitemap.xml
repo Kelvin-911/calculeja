@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://calculeja.exemplo.com.br/</loc>
+    <loc>https://calculeja.vercel.app/</loc>
   </url>
   <url>
-    <loc>https://calculeja.exemplo.com.br/calculadoras/salario-liquido.html</loc>
+    <loc>https://calculeja.vercel.app/calculadoras/salario-liquido.html</loc>
   </url>
   <url>
-    <loc>https://calculeja.exemplo.com.br/calculadoras/rescisao-trabalhista.html</loc>
+    <loc>https://calculeja.vercel.app/calculadoras/rescisao-trabalhista.html</loc>
   </url>
   <url>
-    <loc>https://calculeja.exemplo.com.br/calculadoras/juros-compostos.html</loc>
+    <loc>https://calculeja.vercel.app/calculadoras/juros-compostos.html</loc>
   </url>
 </urlset>
