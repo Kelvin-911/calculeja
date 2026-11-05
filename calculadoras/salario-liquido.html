@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de Salário Líquido CLT 2026 — CalculeJá</title>
+  <meta name="description" content="Calcule o salário líquido a partir do salário bruto CLT, com os descontos de INSS e IRRF atualizados para 2026, incluindo a redução da Lei 15.270/2025." />
+  <link rel="canonical" href="https://calculeja.exemplo.com.br/calculadoras/salario-liquido.html" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="../index.html">Calcule<span>Já</span></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="salario-liquido.html">Salário líquido</a></li>
+          <li><a href="rescisao-trabalhista.html">Rescisão</a></li>
+          <li><a href="juros-compostos.html">Juros compostos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container calc-page">
+    <div class="calc-header">
+      <h1>Calculadora de Salário Líquido CLT (2026)</h1>
+      <p>Informe o salário bruto para estimar os descontos de INSS e IRRF e o valor líquido a receber, já considerando a redução adicional da Lei 15.270/2025.</p>
+    </div>
+
+    <div class="calc-layout">
+      <form class="card" id="form-salario" novalidate>
+        <div class="field">
+          <label for="salario-bruto">Salário bruto mensal (R$)</label>
+          <input type="text" inputmode="decimal" id="salario-bruto" name="salario-bruto" placeholder="Ex: 3500,00" required />
+        </div>
+        <div class="field">
+          <label for="dependentes">Número de dependentes</label>
+          <input type="number" min="0" step="1" id="dependentes" name="dependentes" value="0" />
+          <span class="hint">Usado apenas se for mais vantajoso que o desconto simplificado — o cálculo escolhe automaticamente a opção que resulta em menor imposto.</span>
+        </div>
+        <div class="field">
+          <label for="outros-descontos">Outros descontos mensais (R$)</label>
+          <input type="text" inputmode="decimal" id="outros-descontos" name="outros-descontos" placeholder="Ex: plano de saúde, vale-transporte" />
+          <span class="hint">Opcional. Some aqui descontos fixos como plano de saúde, pensão, etc.</span>
+        </div>
+        <div class="error-msg" id="erro-salario" role="alert"></div>
+        <button type="submit" class="btn-primary">Calcular salário líquido</button>
+      </form>
+
+      <div class="card result-panel" id="resultado-salario" aria-live="polite">
+        <p class="result-empty">Preencha o formulário para ver o resultado.</p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>Como o salário líquido é calculado</h2>
+      <p>O salário líquido é o salário bruto menos os descontos obrigatórios de INSS e Imposto de Renda Retido na Fonte (IRRF), além de eventuais descontos contratuais (plano de saúde, pensão alimentícia, etc.).</p>
+
+      <h3>Tabela do INSS 2026</h3>
+      <table class="breakdown">
+        <thead><tr><th>Faixa de salário de contribuição</th><th>Alíquota</th></tr></thead>
+        <tbody>
+          <tr><td>Até R$ 1.621,00</td><td>7,5%</td></tr>
+          <tr><td>De R$ 1.621,01 a R$ 2.902,84</td><td>9%</td></tr>
+          <tr><td>De R$ 2.902,85 a R$ 4.354,27</td><td>12%</td></tr>
+          <tr><td>De R$ 4.354,28 a R$ 8.475,55 (teto)</td><td>14%</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Tabela do IRRF 2026</h3>
+      <table class="breakdown">
+        <thead><tr><th>Base de cálculo mensal</th><th>Alíquota</th><th>Parcela a deduzir</th></tr></thead>
+        <tbody>
+          <tr><td>Até R$ 2.428,80</td><td>Isento</td><td>—</td></tr>
+          <tr><td>De R$ 2.428,81 a R$ 2.826,65</td><td>7,5%</td><td>R$ 182,16</td></tr>
+          <tr><td>De R$ 2.826,66 a R$ 3.751,05</td><td>15%</td><td>R$ 394,16</td></tr>
+          <tr><td>De R$ 3.751,06 a R$ 4.664,68</td><td>22,5%</td><td>R$ 675,49</td></tr>
+          <tr><td>Acima de R$ 4.664,68</td><td>27,5%</td><td>R$ 908,73</td></tr>
+        </tbody>
+      </table>
+      <p>Além da tabela, a <strong>Lei 15.270/2025</strong> criou uma redução adicional sobre o imposto já calculado: ela zera o IRRF para quem ganha até R$ 5.000,00 por mês e reduz parcialmente o imposto entre R$ 5.000,01 e R$ 7.350,00.</p>
+    </section>
+
+    <div class="disclaimer">
+      Esta calculadora é apenas uma estimativa educativa, baseada nas tabelas públicas de INSS e IRRF vigentes em 2026. Valores oficiais podem mudar; consulte sempre o departamento de RH da empresa, um contador ou as fontes oficiais (gov.br/inss e gov.br/receitafederal) antes de decisões financeiras.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="../index.html">CalculeJá</a> — ferramentas gratuitas de cálculo financeiro e trabalhista.</p>
+    </div>
+  </footer>
+  <script type="module" src="../js/main.js"></script>
+  <script type="module">
+    import { initSalarioLiquidoForm } from "../js/calc-salario.js";
+    initSalarioLiquidoForm();
+  </script>
+</body>
+</html>

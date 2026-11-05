@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de Rescisão Trabalhista 2026 — CalculeJá</title>
+  <meta name="description" content="Calcule uma estimativa da rescisão trabalhista: saldo de salário, aviso prévio, 13º proporcional, férias proporcionais e multa de 40% do FGTS." />
+  <link rel="canonical" href="https://calculeja.exemplo.com.br/calculadoras/rescisao-trabalhista.html" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="../index.html">Calcule<span>Já</span></a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="salario-liquido.html">Salário líquido</a></li>
+          <li><a href="rescisao-trabalhista.html">Rescisão</a></li>
+          <li><a href="juros-compostos.html">Juros compostos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="container calc-page">
+    <div class="calc-header">
+      <h1>Calculadora de Rescisão Trabalhista</h1>
+      <p>Estimativa das principais verbas de uma rescisão CLT: saldo de salário, aviso prévio, 13º e férias proporcionais e multa do FGTS.</p>
+    </div>
+
+    <div class="calc-layout">
+      <form class="card" id="form-rescisao" novalidate>
+        <div class="field">
+          <label for="salario-bruto-rescisao">Salário bruto mensal (R$)</label>
+          <input type="text" inputmode="decimal" id="salario-bruto-rescisao" placeholder="Ex: 3000,00" required />
+        </div>
+        <div class="field">
+          <label for="data-admissao">Data de admissão</label>
+          <input type="date" id="data-admissao" required />
+        </div>
+        <div class="field">
+          <label for="data-desligamento">Data de desligamento</label>
+          <input type="date" id="data-desligamento" required />
+        </div>
+        <div class="field">
+          <label for="tipo-rescisao">Tipo de rescisão</label>
+          <select id="tipo-rescisao">
+            <option value="sem-justa-causa">Demissão sem justa causa (pela empresa)</option>
+            <option value="pedido-demissao">Pedido de demissão (pelo funcionário)</option>
+            <option value="justa-causa">Demissão por justa causa</option>
+          </select>
+        </div>
+        <div class="field" id="campo-fgts">
+          <label for="saldo-fgts">Saldo do FGTS depositado (R$)</label>
+          <input type="text" inputmode="decimal" id="saldo-fgts" placeholder="Consulte no app FGTS" />
+          <span class="hint">Usado para estimar a multa de 40%, devida apenas na demissão sem justa causa.</span>
+        </div>
+        <div class="field">
+          <label><input type="checkbox" id="ferias-vencidas" style="width:auto;display:inline-block;margin-right:0.4rem;" />Tenho férias vencidas (um período completo não gozado)</label>
+        </div>
+        <div class="error-msg" id="erro-rescisao" role="alert"></div>
+        <button type="submit" class="btn-primary">Calcular rescisão</button>
+      </form>
+
+      <div class="card result-panel" id="resultado-rescisao" aria-live="polite">
+        <p class="result-empty">Preencha o formulário para ver o resultado.</p>
+      </div>
+    </div>
+
+    <section class="content-section">
+      <h2>O que entra na conta</h2>
+      <ul>
+        <li><strong>Saldo de salário:</strong> dias trabalhados no mês do desligamento.</li>
+        <li><strong>Aviso prévio indenizado:</strong> 30 dias + 3 dias por ano completo de serviço, até 90 dias — devido apenas quando a empresa demite sem justa causa.</li>
+        <li><strong>13º salário proporcional:</strong> 1/12 do salário por mês trabalhado no ano (mês com 15 dias ou mais conta como mês cheio).</li>
+        <li><strong>Férias proporcionais + 1/3:</strong> calculadas desde o último aniversário do período aquisitivo.</li>
+        <li><strong>Multa de 40% do FGTS:</strong> sobre o saldo depositado, devida apenas na demissão sem justa causa.</li>
+      </ul>
+      <p>Na demissão por justa causa, o trabalhador perde o direito ao aviso prévio, ao 13º e às férias proporcionais e à multa do FGTS, mantendo apenas saldo de salário e férias vencidas, se houver.</p>
+    </section>
+
+    <div class="disclaimer">
+      Esta calculadora traz uma <strong>estimativa simplificada</strong> e não inclui a projeção do aviso prévio sobre o tempo de serviço, nem situações especiais (acordo entre as partes, estabilidades, licenças, múltiplos períodos de férias vencidas, etc.). Para um cálculo oficial, consulte o setor de RH, um contador ou um advogado trabalhista.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><a href="../index.html">CalculeJá</a> — ferramentas gratuitas de cálculo financeiro e trabalhista.</p>
+    </div>
+  </footer>
+  <script type="module" src="../js/main.js"></script>
+  <script type="module">
+    import { initRescisaoForm } from "../js/calc-rescisao.js";
+    initRescisaoForm();
+  </script>
+</body>
+</html>
