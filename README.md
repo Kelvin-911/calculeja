@@ -1,5 +1,12 @@
 # CalculeJá — calculadoras financeiras e trabalhistas
 
+## Status atual
+
+- **Código no GitHub:** https://github.com/Kelvin-911/calculeja
+- **Site no ar (Vercel):** https://calculeja-qyw3st4bt-projeto-2567.vercel.app
+- Todo push na branch `main` gera um novo deploy automático na Vercel.
+- Próximo passo recomendado: pegar a URL de produção "estável" no painel da Vercel (Project → Domains) — a URL acima é a do primeiro deploy e pode mudar; a Vercel também gera um domínio fixo tipo `calculeja.vercel.app` que não muda a cada deploy.
+
 Site estático, 100% gratuito pra hospedar, com calculadoras que resolvem dúvidas reais de quem é CLT no Brasil. Objetivo: gerar renda via **AdSense** (anúncios) e **afiliados** (cursos de finanças/carreira) conforme o tráfego crescer. Sem investimento inicial — só tempo.
 
 ## Por que esse nicho
