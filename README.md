@@ -9,6 +9,9 @@
 - **Google AdSense:** conta criada, código de anúncios (`ca-pub-5938250398235100`) e `ads.txt` publicados, **revisão do site solicitada** em 05/11/2026 — aguardando aprovação do Google (pode levar de dias a semanas).
 - **Falta:** completar os dados de pagamento no painel do AdSense (Pagamentos → dados bancários) — não bloqueia a revisão, mas é necessário pra receber quando aprovar.
 - Página de `privacidade.html` publicada (exigida pelo AdSense, linkada no rodapé de todas as páginas).
+- Site agora com 6 calculadoras (salário líquido, rescisão, férias, 13º, horas extras, juros compostos).
+
+**Nota de troubleshooting:** em 05/11/2026 o pipeline de deploy automático GitHub→Vercel travou (pushes não geravam deploy, mesmo com Deploy Hook manual). Resolvido desconectando e reconectando o repositório em Project Settings → Git. Se os deploys pararem de refletir no site, esse é o primeiro passo a tentar.
 
 Site estático, 100% gratuito pra hospedar, com calculadoras que resolvem dúvidas reais de quem é CLT no Brasil. Objetivo: gerar renda via **AdSense** (anúncios) e **afiliados** (cursos de finanças/carreira) conforme o tráfego crescer. Sem investimento inicial — só tempo.
 
@@ -23,9 +26,14 @@ Site estático, 100% gratuito pra hospedar, com calculadoras que resolvem dúvid
 - `index.html` — página inicial com os cards das calculadoras.
 - `calculadoras/salario-liquido.html` — salário líquido CLT com tabelas de INSS e IRRF **2026** (incluindo a redução da Lei 15.270/2025). Lógica testada e validada contra exemplo oficial da fonte.
 - `calculadoras/rescisao-trabalhista.html` — saldo de salário, aviso prévio, 13º e férias proporcionais, multa de 40% do FGTS.
+- `calculadoras/ferias.html` — férias CLT com 1/3 constitucional e abono pecuniário.
+- `calculadoras/decimo-terceiro.html` — 13º salário (1ª e 2ª parcela).
+- `calculadoras/horas-extras.html` — horas extras 50%/100% e adicional noturno.
 - `calculadoras/juros-compostos.html` — simulação de investimento com aportes mensais.
+- `privacidade.html` — política de privacidade (exigida pelo AdSense).
 - `css/styles.css` — visual único, responsivo, com modo escuro automático.
 - `robots.txt` e `sitemap.xml` — base de SEO técnico.
+- `js/tabelas-fiscais-2026.js` — módulo único com as tabelas de INSS/IRRF/Lei 15.270, reaproveitado pelas calculadoras de salário, férias e 13º (evita duplicação e inconsistência entre elas).
 
 Tudo em HTML/CSS/JS puro (sem build, sem framework) — qualquer hospedagem estática gratuita funciona.
 
